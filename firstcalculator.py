@@ -12,7 +12,7 @@ dataframe=pd.DataFrame({"Operation":["Addition","Subtraction","Multiplication","
                         "Symbol":["➕","➖","✖️ ","/","➗ ","**"]})
 st.write("Arithmetic operations",dataframe)
 num1=st.number_input("Enter first number")
-num2=st.number_input("Enter second number")
+num2=st.number_input("Enter second number/Power")
 operation=st.selectbox("Select operation",("Addition","Subtraction","Multiplication","Division","Module","Power"))
 if st.button("Calculate"):
     if operation=="Addition":
@@ -37,5 +37,3 @@ if st.button("Calculate"):
         st.error("Invalid operation")
 st.subheader(":green[Thank you for using the calculator !]")       
 st.divider()
-pages = ["Simple Calculator","Percentage / GST calculator","Age calculator","BMI calculator","Loan EMI calculator","Home","About","Save Results","Save Results as PDF","History"]
-pg = st.sidebar.radio("Menu",pages)
